@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout Page</title>
+    <link rel="stylesheet" href="css/logout.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logout-box">
+            <h1>Hello, {{userName}}! How are you?</h1>
+            <p>You have successfully logged in to the system.</p>
+            <div class="buttons">
+                <button id="back-to-home">Back to Home</button>
+                <button id="login-again">Login Again</button>
+                 <button class="welcome" id="Logoutbtn">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const backToHomeButton = document.getElementById('back-to-home');
+        const loginAgainButton = document.getElementById('login-again');
+
+        backToHomeButton.addEventListener('click', function() {
+            window.location.href = '/'; // Replace with your home page route
+        });
+
+        loginAgainButton.addEventListener('click', function() {
+            window.location.href = '/login'; // Replace with your login page route
+        });
+
+        document.getElementById('Logoutbtn').addEventListener('click', function() {
+   window.location.href = '/logout';
+});
+    </script>
+</body>
+</html>

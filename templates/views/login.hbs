@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-page</title>
+    <link rel="stylesheet" href="login.css">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+</style>
+</head>
+<body>
+    <div id="header-container">
+        <header>
+            <div class="logo-header">
+                <a href="http://"><img src="css/logo - sticker.png" alt="logo"></a>
+                <p id="HMS-header">Hostel Management System</p>
+            </div>
+
+            <div class="buttons">
+                <button type="button" id="back_to_home">Back to Home</button>
+                <button type="button" id="Register">Register</button>
+            </div>
+        </header>
+    </div>
+    <div class="container">
+        <main>
+            <div class="login-container">
+                <div class="head">
+                    <img src="css/logo - sticker.png" alt="logo" id="black-logo">
+                    <h2>Login</h2>
+                    <p>Sign in to your account</p>
+                </div>
+                <div class="input-form">
+                    <form action="/login" method="post">
+                        <input type="text" name="email" id="username" placeholder="Enter your email" required>
+                        <input type="password" name="password" id="password" placeholder="Password" required>
+                        <div class="remember-forgot">
+                            <div class="remember">
+                                <input type="checkbox" name="remember_me" id="remember">
+                                <label for="remember_me">Remember Me</label>
+                            </div>
+                            <div class="forgot">
+                                <a href="http://">Forgot Password?</a>
+                            </div>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Login" name="Login" id="login_button">
+                            <p>Don't have an account.&nbsp;<a href="http://">Register</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        // Get references to the buttons
+const backButton = document.getElementById('back_to_home');
+const registerButton = document.getElementById('Register');
+
+// Add event listeners to the buttons
+backButton.addEventListener('click', function() {
+    window.location.href = '/'; 
+});
+
+registerButton.addEventListener('click', function() {
+    window.location.href = '/register'; 
+});
+
+    </script>
+</body>
+</html>
